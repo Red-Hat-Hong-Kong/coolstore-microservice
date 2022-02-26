@@ -11,10 +11,10 @@
   "description": "A JBoss Developer retail demo featuring a pricing microservice, angular UI microservice, protected by Red Hat SSO",
   "homepage": "https://developers.redhat.com",
   "dependencies": {
-    "cors": "^2.8.3",
-    "express": "^4.13.4",
-    "keycloak-connect": "^3.1.0",
-    "request": "^2.74.0"
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "keycloak-connect": "^3.4.3",
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "bower": ">=1.7.9",
