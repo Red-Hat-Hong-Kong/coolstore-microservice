@@ -13,7 +13,7 @@
         "isotope": "2.2.2",
         "imagesloaded": "4.1.1",
         "angular-route": "1.5.10",
-        "keycloak": "2.5.10.Final"
+        "keycloak": "git@github.com:keycloak/keycloak.git"
     },
     "resolutions": {
         "angular": "1.5.10",
