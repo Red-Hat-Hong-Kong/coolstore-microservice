@@ -5,9 +5,7 @@ var express = require('express'),
     fs = require('fs'),
     app = express(),
     path = require("path"),
-    keycloakConfig = require('./app/keycloak.config.js'),
     coolstoreConfig = require('./app/coolstore.config.js'),
-    Keycloak = require('keycloak-connect'),
     cors = require('cors');
 
 
@@ -24,10 +22,6 @@ app.use(function (err, req, res, next) {
     res.status(500).send('Something bad happened!');
 });
 
-// keycloak config server
-app.get('/keycloak.json', function (req, res, next) {
-    res.json(keycloakConfig);
-});
 // coolstore config server
 app.get('/coolstore.json', function (req, res, next) {
     res.json(coolstoreConfig);
@@ -38,7 +32,6 @@ app.use('/app', express.static(path.join(__dirname, '/app')));
 app.use('/bower_components', express.static(path.join(__dirname, '/bower_components')));
 
 console.log("coolstore config: " + JSON.stringify(coolstoreConfig));
-console.log("keycloak config: " + JSON.stringify(keycloakConfig));
 
 
 http.createServer(app).listen(port);
